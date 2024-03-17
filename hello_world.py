@@ -123,7 +123,7 @@ def breed_new(population: List[Candidate], population_size: int, mutation_prob: 
     num_fit = len(population)
     while len(population) < population_size:
         i = random.randint(0, num_fit - 1)
-        j = (i + random.randint(0, num_fit - 2)) % num_fit
+        j = (i + random.randint(1, num_fit - 1)) % num_fit
 
         parent_a = population[i]
         parent_b = population[j]
